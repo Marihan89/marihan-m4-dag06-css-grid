@@ -197,6 +197,9 @@ legend {
 }
 
 /* ===== Dag 5: Flexbox ===== */
+
+
+/* Here we need to align all menu items horizontally to represent top main menu of the page  */
 header {
   display: flex;
   flex-wrap: wrap;
@@ -209,11 +212,16 @@ header h1 {
   margin: 0;
 }
 
+/*  for the menu we need to swap between viewing the menu items horizontally and
+vertically according to the screensize , using media queries and we still work
+on one Axis */
 nav ul {
   display: flex;
   gap: 20px;
 }
 
+/* Here also all the info as address and contact and copy right will lay
+on the same line and no need to have grid for just one row */
 footer {
   display: flex;
   flex-wrap: wrap;
@@ -221,6 +229,9 @@ footer {
   gap: 16px;
 }
 
+/* As long as we decides to view the cafe menu item as image with its details
+at the bottom..then we work based on vertical Axis only no need for Grid to design
+one column and 3 rows */
 article {
   display: flex;
   flex-direction: column;
@@ -265,3 +276,18 @@ we remove this to explicitly set the location of the img at column 2
 
 
 }
+
+/* Grid vs Flex
+
+
+I would use grid for main structure when i need to work on both dimensions and
+i know where to locate elements while flex is more likely for internal structures
+or one dimensional view for example main page menu (Horizontally )or side menue (vertically )
+
+But i see that there nothing called only grid or only flex mixing both and get benefits of each
+one to customize and structure our pages  is the best approach
+
+for example here in the contact form i can use grid as main layout of the form
+while using flex for each div to structure lable and input fields
+
+*/
